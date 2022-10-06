@@ -7,7 +7,7 @@ import {
   Title,
 } from './Header.styled';
 
- function Header({title}) {
+function Header({title}) {
   return (
     <HeaderWrap>
       <LogoWrap>

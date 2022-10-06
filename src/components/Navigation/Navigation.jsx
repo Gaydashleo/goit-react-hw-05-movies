@@ -1,16 +1,17 @@
+
 import {
   NavList,
   Item,
-  NavLink
+  Link
 } from './Navigation.styled';
 
 function Navigation() {
   <NavList>
     <Item>
-      <NavLink to="/">Home</NavLink>
+      <Link to="/">Home</Link>
     </Item>
         <Item>
-      <NavLink to="/movies">Movies</NavLink>
+      <Link to="/movies">Movies</Link>
     </Item>
   </NavList> 
 

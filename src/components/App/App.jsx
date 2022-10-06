@@ -1,14 +1,14 @@
 
 
-import Container from 'components/Container';
+// import Container from 'components/Container';
 import Header from 'components/Header';
 
 
 function App() {
   return (
-    <Container>
+    // <Container>
       <Header title="Search Movie"/>
-    </Container>
+    // </Container>
   );
 };
 export default App;

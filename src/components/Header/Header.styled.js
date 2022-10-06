@@ -11,7 +11,7 @@ export const HeaderWrap = styled.header`
   box-shadow: var(--boxShadow);
 `;
 export const LogoWrap = styled.div`
-   display: flex;
+  display: flex;
   align-items: center;
   margin-bottom: 30px;
 `;
