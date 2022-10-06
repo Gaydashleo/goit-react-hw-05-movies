@@ -1,5 +1,5 @@
 import propTypes from 'prop-types';
-import Container from 'components/Container';
+// import Container from 'components/Container';
 
 import {
   HeaderWrap,
@@ -14,7 +14,7 @@ import {
 function Header({title}) {
   return (
     <HeaderWrap>
-      <Container>
+      
         <LogoWrap>
         <IconHeader />
         <Title>{title }</Title>
@@ -27,7 +27,7 @@ function Header({title}) {
       <Link to="/movies">Movies</Link>
     </Item>
   </NavList>
-      </Container>
+     
       
     </HeaderWrap>
   );

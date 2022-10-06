@@ -4,12 +4,8 @@ import { NavLink } from 'react-router-dom';
 
 
 export const HeaderWrap = styled.header`
-  display: flex;
-  align-items: center;
-  min-height: 80px;
-  padding: 0 40px;
-  background-color: #34495e;
-  box-shadow: var(--boxShadow);
+  background-image:linear-gradient(to right, #0B0A0A, #FFFFFF);
+  padding: 50px 0 50px 0;
 `;
 export const LogoWrap = styled.div`
   display: flex;
@@ -20,18 +16,24 @@ export const LogoWrap = styled.div`
 export const IconHeader = styled(FaFilm)`
 width: 40px;
   height: 40px;
-  margin-right: 15px;
-  color:#fafafa;
+  padding-left:45px;
+  margin-right: 25px;
+  color:#999999;
+  
 `;
 
 export const Title = styled.h1`
+color:#F6ECEC;
 font-size:30px;
+
 `;
 export const NavList = styled.ul`
 display: flex;
 `;
 
 export const Item = styled.li`
+  list-style-type: none;
+
   margin-right: 20px;
 
   :last-child {
@@ -42,7 +44,7 @@ export const Item = styled.li`
 export const Link = styled(NavLink)`
 font-size: 15px;
   font-weight: 700;
-  color:#161616;
+  color:#837D7D;
   transition: color 250ms linear;
 
   &.active {
