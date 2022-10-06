@@ -1,20 +1,34 @@
 import propTypes from 'prop-types';
-import Navigation from 'components/Navigation';
+import Container from 'components/Container';
+
 import {
   HeaderWrap,
   LogoWrap,
   IconHeader,
   Title,
+  NavList,
+  Item,
+  Link
 } from './Header.styled';
 
 function Header({title}) {
   return (
     <HeaderWrap>
-      <LogoWrap>
+      <Container>
+        <LogoWrap>
         <IconHeader />
         <Title>{title }</Title>
       </LogoWrap>
-      <Navigation/>
+      <NavList>
+    <Item>
+      <Link to="/">Home</Link>
+    </Item>
+        <Item>
+      <Link to="/movies">Movies</Link>
+    </Item>
+  </NavList>
+      </Container>
+      
     </HeaderWrap>
   );
 };
