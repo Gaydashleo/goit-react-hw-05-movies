@@ -1,3 +1,4 @@
+
 import propTypes from 'prop-types';
 // import Container from 'components/Container';
 
@@ -14,8 +15,7 @@ import {
 function Header({title}) {
   return (
     <HeaderWrap>
-      
-        <LogoWrap>
+    <LogoWrap>
         <IconHeader />
         <Title>{title }</Title>
       </LogoWrap>
@@ -26,10 +26,8 @@ function Header({title}) {
         <Item>
       <Link to="/movies">Movies</Link>
     </Item>
-  </NavList>
-     
-      
-    </HeaderWrap>
+  </NavList> 
+  </HeaderWrap>
   );
 };
 
