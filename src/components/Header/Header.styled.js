@@ -6,6 +6,7 @@ import { NavLink } from 'react-router-dom';
 export const HeaderWrap = styled.header`
   background-image:linear-gradient(to right, #0B0A0A, #FFFFFF);
   padding: 50px 0 50px 0;
+  
 `;
 export const LogoWrap = styled.div`
   display: flex;
