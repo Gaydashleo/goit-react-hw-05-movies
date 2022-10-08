@@ -9,35 +9,36 @@ function HomePage() {
 
   useEffect(() => {
     getTrending().then(({ results }) => {
-      const miviesArray = [];
+      const moviesArray = [];
 
-      result.map(
+      results.map(
         ({
           id,
           original_title,
           poster,
-          quantyty_average,
-          quantyty_count
+          vote_average,
+          vote_count
         }) => {
           const movie = {
             id,
             title: original_title,
             poster: poster,
-            quantytyAverage: quantyty_average,
-            quantytyCount: quantyty_count,
+            voteAverage: vote_average,
+            voteCount: vote_count,
           };
           return moviesArray.push(movie);
         },
       );
       setMovies(moviesArray);
     });
-  },[]);
-        
-      
- 
+  }, []);
   
-
-
-
-
+  return (
+    movies && (
+      <>
+        <MoviesList movies={movies} />
+      </>
+    )
+  );
 }
+export default HomePage;
