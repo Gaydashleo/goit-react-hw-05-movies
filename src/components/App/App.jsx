@@ -1,20 +1,25 @@
 // import { Routes,Route } from 'react-router-dom';
-
+import { lazy, Suspense } from 'react';
 import Container from 'components/Container';
 import Header from 'components/Header';
+import Loader from 'components/Loader';
 
 
 function App() {
   return (
-    <Container>
+    <>
       <Header title="Search Movie" />
-      {/* <Routes>
+
+      <Suspense fallback={<Loader />}>
+        {/* <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/movies" element={<MoviesPage />} />
         <Route path="/movies/:movieId" element={<MovieDetailsPage />} />
         <Route path="/movies/:movieId" element={<MovieDetailsPage />} />
       </Routes> */}
-    </Container>
+      </Suspense>
+    
+    </>
   );
 };
 export default App;
