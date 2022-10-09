@@ -1,5 +1,6 @@
 import propTypes from 'prop-types';
-import MovieCard from './MoviesList.styled';
+import MovieCard from 'components/MovieCard';
+import {Wrapper} from './MoviesList.styled'
 
 function MoviesList({ movies }) {
   return (
