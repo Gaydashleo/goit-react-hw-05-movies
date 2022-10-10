@@ -1,6 +1,6 @@
 import propTypes from 'prop-types';
 import MovieCard from 'components/MovieCard';
-import {Wrapper} from './MoviesList.styled'
+import { Wrapper } from './MoviesList.styled';
 
 function MoviesList({ movies }) {
   return (
@@ -29,4 +29,5 @@ MoviesList.propTypes = {
       voteAverage: propTypes.number,
       voteCount: propTypes.number,
     }),).isRequired,
-  };
+};
+export default MoviesList; 

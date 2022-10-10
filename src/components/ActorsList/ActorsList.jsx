@@ -1,6 +1,6 @@
 import propTypes from 'prop-types';
 import bgActor from '../../Image/oscar.jpg';
-import { List, Item, PhotoWrap, Photo, Name } from './ActorList.styled';
+import { List, Item, PhotoWrap, Photo, Name } from './ActorsList.styled';
 
 
 function ActorsList({ actors }) {

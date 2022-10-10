@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { toast } from 'react-toastify';
 import { FormSearch, InputSearch, ButtonSubmit } from './SearchBar.styled';
 import { FaSearch } from 'react-icons/fa';
-import propTypes from 'prop-types';
+
 
 function SearchBar({onHandleSubmit}) {
   const [query, setQuery] = useState('');
@@ -32,9 +32,5 @@ function SearchBar({onHandleSubmit}) {
     </>
   );
 }
-
-SearchBar.propTypes = {
-  onHandleSubmit: propTypes.func.isRequired,
-};
 
 export default SearchBar;

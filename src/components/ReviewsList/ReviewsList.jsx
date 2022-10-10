@@ -27,3 +27,5 @@ ReviewsList.propTypes = {
     }),
   ).isRequired,
 };
+
+export default ReviewsList;
