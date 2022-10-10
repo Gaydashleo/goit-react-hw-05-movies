@@ -1,11 +1,11 @@
 import propTypes from 'prop-types';
 import bgActor from '../../Image/oscar.jpg';
 import { List, Item, PhotoWrap, Photo, Name } from './ActorsList.styled';
-
+import Container from 'components/Container';
 
 function ActorsList({ actors }) {
   return (
-    <>
+    <Container>
       <List>
         {actors.map(({ id, name, photo }) => {
           return (
@@ -19,15 +19,15 @@ function ActorsList({ actors }) {
           );
         })}
       </List>
-    </>
+    </Container>
   );
 }
 ActorsList.propTypes = {
   actors: propTypes.arrayOf(
     propTypes.shape({
-      id: propTypes.number.isRequired,
-      name: propTypes.string.isRequired,
-      photo: propTypes.string.isRequired,
+      id: propTypes.number,
+      name: propTypes.string,
+      photo: propTypes.string,
     }),
   ).isRequired,
 };

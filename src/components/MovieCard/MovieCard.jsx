@@ -1,9 +1,21 @@
 import { Link, useLocation } from 'react-router-dom';
 import propTypes from 'prop-types';
-import { Item, Title,Poster,VoteWrap, VoteAverage, VoteCount,Value,} from './MovieCard.styled';
+import {
+  Item,
+  Title,
+  Poster,
+  VoteWrap,
+  VoteAverage,
+  VoteCount,
+  Value,
+} from './MovieCard.styled';
 import bgPoster from '../../Image/IMAX.jpg'
 
-function MovieCard({ id, title, poster, voteAverage, voteCount }) {
+function MovieCard({ id,
+  title,
+  poster,
+  voteAverage,
+  voteCount }) {
   const location = useLocation();
 
   return (

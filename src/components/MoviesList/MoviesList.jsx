@@ -1,10 +1,10 @@
 import propTypes from 'prop-types';
 import MovieCard from 'components/MovieCard';
-import { Wrapper } from './MoviesList.styled';
+import { Wrap } from './MoviesList.styled';
 
 function MoviesList({ movies }) {
   return (
-    <Wrapper>
+    <Wrap>
       {movies.map(({ id, title, poster, voteAverage, voteCount }) => {
         return (
           <MovieCard
@@ -16,7 +16,7 @@ function MoviesList({ movies }) {
             voteCount={voteCount} />
         );
       })}
-    </Wrapper>
+    </Wrap>
   );
 }
 

@@ -7,11 +7,11 @@ import { useParams } from 'react-router-dom';
 
 
   function Cast() {
-    const { movied } = useParams();
+    const { movieId } = useParams();
     const [actors, setActors] = useState(null);
 
     useEffect(() => {
-      getMovieCredits(movied).then(({ cast }) => {
+      getMovieCredits(movieId).then(({ cast }) => {
         const actorsArray = [];
 
         cast.map(({ id, name, profile_path }) => {
@@ -24,7 +24,7 @@ import { useParams } from 'react-router-dom';
         });
         setActors(actorsArray);
       });
-    }, [movied]);
+    }, [movieId]);
     return actors &&<ActorsList zctors={actors}/>
 }
 export default Cast;

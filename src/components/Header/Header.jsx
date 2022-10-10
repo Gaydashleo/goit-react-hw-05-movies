@@ -9,7 +9,7 @@ import {
   Title,
   NavList,
   Item,
-  Link
+  CustomLink,
 } from './Header.styled';
 
 function Header({title}) {
@@ -21,10 +21,10 @@ function Header({title}) {
       </LogoWrap>
       <NavList>
     <Item>
-      <Link to="/">Home</Link>
+      <CustomLink to="/">Home</CustomLink>
     </Item>
         <Item>
-      <Link to="/movies">Movies</Link>
+      <CustomLink to="/movies">Movies</CustomLink>
     </Item>
   </NavList> 
   </HeaderWrap>
