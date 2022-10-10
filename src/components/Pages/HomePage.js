@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import getTrending from 'API/get-trending';
 import MoviesList from 'components/MoviesList';
-
+import Container from 'components/Container';
 
 
 function HomePage() {
@@ -15,14 +15,14 @@ function HomePage() {
         ({
           id,
           original_title,
-          poster,
+          poster_path,
           vote_average,
           vote_count
         }) => {
           const movie = {
             id,
             title: original_title,
-            poster: poster,
+            poster: poster_path,
             voteAverage: vote_average,
             voteCount: vote_count,
           };
@@ -35,9 +35,9 @@ function HomePage() {
   
   return (
     movies && (
-      <>
+      <Container>
         <MoviesList movies={movies} />
-      </>
+      </Container>
     )
   );
 }
