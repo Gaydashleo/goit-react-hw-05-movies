@@ -11,13 +11,15 @@ import {
   TitleWrap,
   Title,
   ReleaseDate,
-  GenresList,
+  TitleDescription,
+  TitleGenres,
+   GenresList,
   GenresItem,
   Description,
-  VoteWrap,
-  VoteAverage,
-  VoteCount,
-  Value,
+  // VoteWrap,
+  // VoteAverage,
+  // VoteCount,
+  // Value,
   AdditionalWrap,
   AdditionalTitle,
   NavigationsList,
@@ -32,7 +34,7 @@ function MovieDetails({ movieInfo }) {
   const subLocation = location.state.from;
 
   const {
-    title, genres, description, poster, releaseDate, voteAverage, voteCount,
+    title, genres, description, poster, releaseDate, 
   } = movieInfo;
 
   const onGoBack = () => navigate(location?.state?.from ?? '/');
@@ -51,21 +53,24 @@ function MovieDetails({ movieInfo }) {
             <Title>{title}</Title>
             <ReleaseDate>{ releaseDate}</ReleaseDate>
           </TitleWrap>
-            <GenresList>
-            {genres &&
+          <TitleDescription>Overview</TitleDescription>
+          <Description>{description}</Description>
+          <TitleGenres> Genres</TitleGenres>
+          <GenresList> 
+              {genres &&
               genres.map(({ name, id }) => (
                 <GenresItem key={id}>{name}</GenresItem>
               ))}
           </GenresList>
-          <Description>{description }</Description>
-          <VoteWrap>
+          
+          {/* <VoteWrap>
             <VoteAverage>
               Vote average: <Value>{voteAverage}</Value>
             </VoteAverage>
             <VoteCount>
               Vote count: <Value>{voteCount}</Value>
             </VoteCount>
-          </VoteWrap>         
+          </VoteWrap>          */}
         </InfoWrap>
       </MainWrap>
             <AdditionalWrap>

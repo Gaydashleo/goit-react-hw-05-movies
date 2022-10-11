@@ -15,8 +15,7 @@ function ReviewsList({ reviews }) {
         })}
       </List>
     </>
-   
-  );
+    );
 }
 ReviewsList.propTypes = {
   rewiews: propTypes.arrayOf(
@@ -25,7 +24,7 @@ ReviewsList.propTypes = {
       author: propTypes.string,
       text: propTypes.string,
     }),
-  ).isRequired,
+  )
 };
 
 export default ReviewsList;

@@ -11,19 +11,17 @@ import {
 } from './MovieCard.styled';
 import bgPoster from '../../Image/IMAX.jpg'
 
-function MovieCard({ id,
-  title,
-  poster,
-  voteAverage,
-  voteCount }) {
+function MovieCard({ id,title,poster,voteAverage,voteCount })
+{
   const location = useLocation();
-
-  return (
+   return (
     <Item>
       <Link to={`/movies/${id}`} state={{ from: location }}>
-        <Title>{title ? title : 'Movie without a title'}</Title>
-        <Poster src={poster ? `https://image.tmdb.org/t/p/w500/${poster}` : bgPoster}
-          alt={title} />
+        <Title>{title ? title : 'Movie without a title' }</Title>
+        <Poster
+          src={poster ? `https://image.tmdb.org/t/p/w500/${poster}` : bgPoster}
+          alt={title}
+        />
         <VoteWrap>
           <VoteAverage>
             Vote average: <Value>{voteAverage}</Value>
