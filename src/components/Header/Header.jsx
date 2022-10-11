@@ -21,10 +21,10 @@ function Header({title}) {
       </LogoWrap>
       <NavList>
     <Item>
-      <CustomLink to="/">Home</CustomLink>
+      <CustomLink to="/"end>Home</CustomLink>
     </Item>
         <Item>
-      <CustomLink to="/movies">Movies</CustomLink>
+      <CustomLink to="/movies"end>Movies</CustomLink>
     </Item>
   </NavList> 
   </HeaderWrap>

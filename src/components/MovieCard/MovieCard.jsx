@@ -13,11 +13,12 @@ import bgPoster from '../../Image/IMAX.jpg'
 
 function MovieCard({ id,title,poster,voteAverage,voteCount })
 {
-  const location = useLocation();
+    const location = useLocation();
    return (
     <Item>
       <Link to={`/movies/${id}`} state={{ from: location }}>
-        <Title>{title ? title : 'Movie without a title' }</Title>
+         <Title>{title ? title : 'Movie without a title'}</Title>
+         
         <Poster
           src={poster ? `https://image.tmdb.org/t/p/w500/${poster}` : bgPoster}
           alt={title}

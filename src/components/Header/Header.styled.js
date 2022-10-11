@@ -43,6 +43,7 @@ export const Item = styled.li`
 `;
 
 export const CustomLink = styled(NavLink)`
+text-decoration:none;
 font-size: 15px;
   font-weight: 700;
   color:#837D7D;

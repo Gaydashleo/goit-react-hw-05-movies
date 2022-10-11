@@ -6,6 +6,7 @@ function MoviesList({ movies }) {
   return (
     <Wrap>
       {movies.map(({ id, title, poster, voteAverage, voteCount }) => {
+
         return (
           <MovieCard
             key={id}
