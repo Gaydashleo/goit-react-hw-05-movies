@@ -5,14 +5,17 @@ import Container from 'components/Container';
 
 function ActorsList({ actors }) {
   return (
-    <Container>
+    <Container isPadding>
       <List>
         {actors.map(({ id, name, photo }) => {
           return (
             <Item key={id}>
               <PhotoWrap>
-                <Photo src={photo ? `https://image.tmdb.org/t/p/w500/${photo}` : bgActor}
-                  alt={name} />
+                <Photo
+                  src={
+                    photo ? `https://image.tmdb.org/t/p/w500/${photo}` : bgActor}
+                    alt={name}
+                />
               </PhotoWrap>
               <Name>{name}</Name>
             </Item>

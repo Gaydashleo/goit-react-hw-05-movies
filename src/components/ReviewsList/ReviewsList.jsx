@@ -21,9 +21,9 @@ function ReviewsList({ reviews }) {
 ReviewsList.propTypes = {
   rewiews: propTypes.arrayOf(
     propTypes.shape({
-      id: propTypes.string.isRequired,
-      author: propTypes.string.isRequired,
-      text: propTypes.string.isRequired,
+      id: propTypes.string,
+      author: propTypes.string,
+      text: propTypes.string,
     }),
   ).isRequired,
 };

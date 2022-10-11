@@ -25,6 +25,6 @@ import { useParams } from 'react-router-dom';
         setActors(actorsArray);
       });
     }, [movieId]);
-    return actors &&<ActorsList zctors={actors}/>
+    return actors &&<ActorsList actors={actors}/>
 }
 export default Cast;
