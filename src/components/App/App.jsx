@@ -4,13 +4,13 @@ import Header from 'components/Header';
 import Loader from 'components/Loader';
 
 const HomePage = lazy(() =>
-  import('../pages/HomePage')
+  import('../../pages/HomePage')
 );
 const MoviesPage = lazy(() =>
-  import('../pages/MoviesPage')
+  import('../../pages/MoviesPage')
 );
 const MovieDetailsPage = lazy(() =>
-  import('../pages/MovieDetailsPage')
+  import('../../pages/MovieDetailsPage')
 );
 
 function App() {
