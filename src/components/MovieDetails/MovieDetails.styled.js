@@ -119,6 +119,7 @@ export const NavigationsItem = styled.li`
 `;
 
 export const CustomLink = styled(NavLink)`
+text-decoration:none;
 font-size: 18px;
 padding: 15px;
    color:#837D7D;

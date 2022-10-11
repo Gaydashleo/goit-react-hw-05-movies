@@ -1,7 +1,8 @@
 import Container from 'components/Container';
 import { useLocation, useNavigate } from 'react-router-dom';
 import propTypes from 'prop-types';
-import bgPoster from '../../Image/IMAX.jpg'
+import bgPoster from '../../utils/Image/IMAX.jpg';
+
 import {
   ButtonGoBack,
   Label,
@@ -10,16 +11,12 @@ import {
   InfoWrap,
   TitleWrap,
   Title,
-  ReleaseDate,
+  // ReleaseDate,
   TitleDescription,
   TitleGenres,
-   GenresList,
+  GenresList,
   GenresItem,
   Description,
-  // VoteWrap,
-  // VoteAverage,
-  // VoteCount,
-  // Value,
   AdditionalWrap,
   AdditionalTitle,
   NavigationsList,
@@ -27,6 +24,7 @@ import {
   CustomLink,
   } from "./MovieDetails.styled";
   import { FaChevronRight, FaChevronLeft } from 'react-icons/fa'; 
+  
 
 function MovieDetails({ movieInfo }) {
   const location = useLocation();
@@ -36,6 +34,9 @@ function MovieDetails({ movieInfo }) {
   const {
     title, genres, description, poster, releaseDate, 
   } = movieInfo;
+  
+
+
 
   const onGoBack = () => navigate(location?.state?.from ?? '/');
   return (
@@ -50,8 +51,8 @@ function MovieDetails({ movieInfo }) {
           alt={title} />
         <InfoWrap>
           <TitleWrap>
-            <Title>{title}</Title>
-            <ReleaseDate>{ releaseDate}</ReleaseDate>
+            <Title>{title} ({ releaseDate}) </Title>
+            {/* <ReleaseDate></ReleaseDate> */}
           </TitleWrap>
           <TitleDescription>Overview</TitleDescription>
           <Description>{description}</Description>
@@ -62,27 +63,18 @@ function MovieDetails({ movieInfo }) {
                 <GenresItem key={id}>{name}</GenresItem>
               ))}
           </GenresList>
-          
-          {/* <VoteWrap>
-            <VoteAverage>
-              Vote average: <Value>{voteAverage}</Value>
-            </VoteAverage>
-            <VoteCount>
-              Vote count: <Value>{voteCount}</Value>
-            </VoteCount>
-          </VoteWrap>          */}
         </InfoWrap>
       </MainWrap>
             <AdditionalWrap>
         <AdditionalTitle>Additional Information</AdditionalTitle>
         <NavigationsList>
           <NavigationsItem>
-            <CustomLink to="cast" state={{ from: subLocation }}>
+            <CustomLink to="cast" end state={{ from: subLocation }}>
               <FaChevronRight /> Cast
             </CustomLink>
           </NavigationsItem>
           <NavigationsItem>
-            <CustomLink to="reviews" state={{ from: subLocation }}>
+            <CustomLink to="reviews" end state={{ from: subLocation }}>
               <FaChevronRight /> Reviews
             </CustomLink>
           </NavigationsItem>

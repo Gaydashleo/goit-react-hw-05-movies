@@ -9,7 +9,7 @@ import {
   VoteCount,
   Value,
 } from './MovieCard.styled';
-import bgPoster from '../../Image/IMAX.jpg'
+import bgPoster from '../../utils/Image/IMAX.jpg'
 
 function MovieCard({ id,title,poster,voteAverage,voteCount })
 {

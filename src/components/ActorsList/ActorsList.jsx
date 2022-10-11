@@ -1,5 +1,5 @@
 import propTypes from 'prop-types';
-import bgActor from '../../Image/oscar.jpg';
+import bgActor from '../../utils/Image/oscar.jpg';
 import { List, Item, PhotoWrap, Photo, Name } from './ActorsList.styled';
 import Container from 'components/Container';
 

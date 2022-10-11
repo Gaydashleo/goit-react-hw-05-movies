@@ -3,9 +3,6 @@ import ActorsList from 'components/ActorsList';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-
-
-
   function Cast() {
     const { movieId } = useParams();
     const [actors, setActors] = useState(null);
