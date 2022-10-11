@@ -97,20 +97,39 @@ export const AdditionalWrap = styled.div`
 
 `;
 export const AdditionalTitle = styled.p`
-
+ padding: 15px;
+  margin-bottom: 0px;
+  background-image:linear-gradient(to right, #0B0A0A, #FFFFFF);
+  color:#837D7D;
 `;
 
 export const NavigationsList = styled.ul`
-
+margin-top: 0px;
+padding-bottom: 15px;
+background-image:linear-gradient(to right, #0B0A0A, #FFFFFF);
+color:#837D7D;
 `;
 
 export const NavigationsItem = styled.li`
-
+  margin-bottom: 15px;
+  
+  :last-child {
+    margin-bottom: 0;
+  }
 `;
 
 export const CustomLink = styled(NavLink)`
 font-size: 18px;
-&.active{
-  color:
-}
+padding: 15px;
+   color:#837D7D;
+  transition: color 250ms linear;
+
+  &.active {
+  text-decoration: underline;
+  }
+  :hover{
+    color:#fafafa;
+  }
+// font-size: 18px;
+// color:#837D7D;
 `;
