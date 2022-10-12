@@ -20,7 +20,7 @@ function SearchBar() {
     });
    
   }
-// defaultValue={searchParams.get('query')}
+
   return (
     <Container>
       <FormSearch onSubmit={onSubmitForm}>
