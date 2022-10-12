@@ -1,4 +1,4 @@
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import bgActor from '../../utils/Image/oscar.jpg';
 import { List, Item, PhotoWrap, Photo, Name } from './ActorsList.styled';
 import Container from 'components/Container';
@@ -26,11 +26,11 @@ function ActorsList({ actors }) {
   );
 }
 ActorsList.propTypes = {
-  actors: propTypes.arrayOf(
-    propTypes.shape({
-      id: propTypes.number,
-      name: propTypes.string,
-      photo: propTypes.string,
+  actors: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      photo: PropTypes.string,
     }),
   ).isRequired,
 };

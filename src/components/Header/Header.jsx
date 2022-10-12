@@ -1,5 +1,5 @@
 
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 // import Container from 'components/Container';
 
 import {
@@ -32,6 +32,6 @@ function Header({title}) {
 };
 
 Header.propTypes = {
-  title: propTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 };
 export default Header;

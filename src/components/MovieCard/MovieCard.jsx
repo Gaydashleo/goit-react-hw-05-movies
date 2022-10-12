@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import {
   Item,
   Title,
@@ -14,11 +14,11 @@ import bgPoster from '../../utils/Image/IMAX.jpg'
 function MovieCard({ id,title,poster,voteAverage,voteCount })
 {
     const location = useLocation();
-   return (
+    return (
     <Item>
       <Link to={`/movies/${id}`} state={{ from: location }}>
-         <Title>{title ? title : 'Movie without a title'}</Title>
-         
+          <Title>{title ? title : 'Movie without a title'}</Title>
+          
         <Poster
           src={poster ? `https://image.tmdb.org/t/p/w500/${poster}` : bgPoster}
           alt={title}
@@ -37,10 +37,10 @@ function MovieCard({ id,title,poster,voteAverage,voteCount })
 }
 
 MovieCard.propTypes = {
-  id: propTypes.number,
-  title: propTypes.string,
-  poster: propTypes.string,
-  voteAverage: propTypes.number,
-  voteCount: propTypes.number,
+  id: PropTypes.number.isRequired,
+  title: PropTypes.string,
+  poster: PropTypes.string.isRequired,
+  voteAverage: PropTypes.number.isRequired,
+  voteCount: PropTypes.number.isRequired,
 };
 export default MovieCard;

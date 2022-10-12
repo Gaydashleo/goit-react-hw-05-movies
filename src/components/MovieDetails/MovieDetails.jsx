@@ -1,6 +1,6 @@
 import Container from 'components/Container';
 import { useLocation, useNavigate } from 'react-router-dom';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import bgPoster from '../../utils/Image/IMAX.jpg';
 
 import {
@@ -83,19 +83,19 @@ function MovieDetails({ movieInfo }) {
 </Container>
   );
 }
-
+// title, genres, description, poster, releaseDate, 
 MovieDetails.propTypes = {
-  movieInfo: propTypes.shape({
-    title: propTypes.string,
-    genres: propTypes.arrayOf(
-      propTypes.shape({
-        id: propTypes.number,
-        name: propTypes.string,
+  movieInfo: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    genres: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number,
+        name: PropTypes.string,
       }),
-    ),
-    description: propTypes.string,
-    poster: propTypes.string,
-    releaseDate: propTypes.string,
+    ).isRequired,
+    description: PropTypes.string.isRequired,
+    poster: PropTypes.string.isRequired,
+    releaseDate: PropTypes.string.isRequired,
   }),
 };
 
